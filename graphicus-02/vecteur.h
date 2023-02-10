@@ -1,3 +1,5 @@
+#ifndef __VECTEUR_H__
+#define __VECTEUR_H__
 #include <iostream>
 
 #define FUNC template <class E>
@@ -162,3 +164,5 @@ E& Vecteur<E>::supprimerElement(int i){
     current--;
     return elements[i];
 }
+
+#endif // VECTEUR_H

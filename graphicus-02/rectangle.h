@@ -19,4 +19,6 @@ class Rectangle:public Forme{
     void       afficher(ostream &s);
 };
 
-#endif
+#include "rectangle.cpp"
+#endif // __RECTANGLE_H__
+

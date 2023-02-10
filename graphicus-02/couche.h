@@ -40,4 +40,6 @@ class Couche {
 // list of chars for state
 static const char *stateChars = "caix";
 
-#endif
+#include "couche.cpp"
+#endif // __COUCHE_H__
+

@@ -1,6 +1,7 @@
 #ifndef __CERCLE_H__
 #define __CERCLE_H__
 
+#include <math.h>
 #include "forme.h"
 
 class Cercle:public Forme {
@@ -16,4 +17,6 @@ class Cercle:public Forme {
     void   afficher(ostream & s);
 };
 
+#include "cercle.cpp"
 #endif
+

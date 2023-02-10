@@ -10,4 +10,6 @@ public:
     void afficher(ostream &s);
 };
 
+#include "carre.cpp"
 #endif
+

@@ -7,7 +7,6 @@
 ********/
 
 #include "couche.h"
-#include "forme.h"
 
 Couche::Couche() {
   state = STATE_INITIALIZED;

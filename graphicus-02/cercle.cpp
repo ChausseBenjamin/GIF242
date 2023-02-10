@@ -1,5 +1,4 @@
 #include "cercle.h"
-#include <math.h>
 
 Cercle::Cercle(int x, int y, int r):Forme(x,y) {
   setRayon(r);

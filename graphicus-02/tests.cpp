@@ -8,7 +8,6 @@
 ********/
 
 #include "tests.h"
-#include "math.h"
 
 
 /* // Tests sur les formes geometriques {{{ */

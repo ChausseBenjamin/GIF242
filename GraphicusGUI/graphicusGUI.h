@@ -21,6 +21,15 @@
 
 #include "centralWidget.h"
 
+#include "../graphicus-02/canevas.h"
+#include "../graphicus-02/carre.h"
+#include "../graphicus-02/cercle.h"
+#include "../graphicus-02/coordonnee.h"
+#include "../graphicus-02/couche.h"
+#include "../graphicus-02/forme.h"
+#include "../graphicus-02/rectangle.h"
+#include "../graphicus-02/vecteur.h"
+
 using namespace std;
 
 struct Informations

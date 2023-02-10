@@ -35,4 +35,6 @@ private:
    Couche couches[MAX_COUCHES];
 };
 
+#include "canevas.cpp"
 #endif
+
