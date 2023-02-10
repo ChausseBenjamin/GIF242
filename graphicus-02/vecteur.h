@@ -14,14 +14,20 @@ class Vecteur {
   Vecteur &operator--();
   Vecteur operator--(int);
   // prototype of the << operator
-  friend std::ostream &operator<<(std::ostream &os, const Vecteur &v){
-    for (int i = 0; i < v.size; i++) {
-      os << v.elements[i];
-      // Only add a space if it's not the last element
-      if (i != v.size - 1) os << "\n";
+    friend std::ostream & operator<<(std::ostream & os, const Vecteur<E> & v) {
+      for (int i = 0; i < v.size; i++) {
+        os << v.elements[i] << std::endl;
+      }
+      return os;
     }
-    return os;
-  }
+  /* friend std::ostream &operator<<(std::ostream &os, const Vecteur &v){ */
+  /*   for (int i = 0; i < v.size; i++) { */
+  /*     os << v.elements[i]; */
+  /*     // Only add a space if it's not the last element */
+  /*     if (i != v.size - 1) os << "\n"; */
+  /*   } */
+  /*   return os; */
+  /* } */
   // prototype of the >> operator // TODO: Check if this is correct
   friend std::istream &operator>>(std::istream &is, Vecteur &v){
     E element;
@@ -31,7 +37,7 @@ class Vecteur {
   bool isEmpty();
   int getTaille();
   int getCapacite();
-  void  afficher(std::ostream &s);
+  /* void  afficher(std::ostream &s); */
   E&  ajouterElement(E *e);
   E&  supprimerElement(int i);
   void vider();
@@ -54,7 +60,7 @@ Vecteur<E>::Vecteur() {
 
 FUNC
 Vecteur<E>::~Vecteur() {
-  delete[] elements;
+  for (int i = 0; i < size; i++) delete elements[i];
 }
 
 FUNC
@@ -119,11 +125,6 @@ bool Vecteur<E>::isEmpty() {
   return size == 0;
 }
 
-/* FUNC */
-/* E& Vecteur<E>::getElement(int i){ */
-/*     return elements[i]; */
-/* } */
-
 FUNC
 int Vecteur<E>::getTaille(){
     return size;
@@ -132,11 +133,6 @@ int Vecteur<E>::getTaille(){
 FUNC
 int Vecteur<E>::getCapacite(){
     return capacity;
-}
-
-FUNC
-void Vecteur<E>::afficher(std::ostream &s){
-    s << *this;
 }
 
 FUNC
@@ -149,9 +145,9 @@ E& Vecteur<E>::ajouterElement(E *e){
 
 FUNC
 void Vecteur<E>::vider(){
-    size = 0;
     current = -1;
-    delete[] elements;
+    for (int i = 0; i < size; i++) delete elements[i];
+    size = 0;
 }
 
 FUNC

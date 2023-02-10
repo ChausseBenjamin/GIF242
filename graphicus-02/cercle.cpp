@@ -25,8 +25,7 @@ double Cercle::getPerimetre() {
 };
 
 void Cercle::afficher(ostream & s) {
-  s << "Cercle (x=" << getAncrage().x
-    << ", y="       << getAncrage().y
-    << ", r="       << getRayon()
-    << ", aire="    << aire() << ")\n";
+  s << "C " << getAncrage().x
+    << " "  << getAncrage().y
+    << " "  << getRayon();
 };

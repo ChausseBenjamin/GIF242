@@ -7,9 +7,7 @@ Carre::~Carre() {
 };
 
 void Carre::afficher(ostream &s) {
-    s << "Carre(x=" << getAncrage().x
-      << ", y=" << getAncrage().y
-      << ", c=" << getLargeur()
-      << ", a=" << aire()
-      << ")\n";
+    s << "K " << getAncrage().x
+      << " " << getAncrage().y
+      << " " << getLargeur();
 };

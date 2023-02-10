@@ -7,7 +7,7 @@
 
 ALL := graphicus-02.o tests.o canevas.o couche.o forme.o vecteur.o cercle.o rectangle.o carre.o
 
-CFLAGS := -flto -Ofast -march=native
+CFLAGS := -g -flto -Ofast -march=native
 
 # graphicus-02: $(ALL)
 # 	g++ $(CFLAGS) -o $@ $^ && strip $@ $^

@@ -11,16 +11,18 @@
 #ifndef __COUCHE_H__
 #define __COUCHE_H__
 
-#define STATE_INIT 0 // Couche initialisee mais vide
-#define STATE_ACTIVE 1 // Couche active (peut-etre modifiee)
-#define STATE_INACTIVE 2 // Couche inactive (non modifiable)
+#define STATE_HIDDEN 0 // Couche active (peut-etre modifiee)
+#define STATE_ACTIVE 1 // Couche inactive (non modifiable)
+#define STATE_INITIALIZED 2 // Couche cachee (non affichee)
+#define STATE_INACTIVE 3 // Couche affichee
 
 #include "vecteur.h"
+#include "forme.h"
 
 class Couche {
   private:
     int     state;
-    Vecteur vecteur;
+    Vecteur<Forme*> vecteur;
   public:
     Couche();
     ~Couche();
@@ -33,14 +35,9 @@ class Couche {
     bool   ajouterForme(Forme *f);
     Forme  *supprimerForme(int index);
     bool   reinitialiser();
-
 };
 
-static const char* const STATES[] = {
-    "initialisee",
-    "actif",
-    "inactif"
-};
-
+// list of chars for state
+static const char *stateChars = "caix";
 
 #endif

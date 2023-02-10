@@ -33,10 +33,8 @@ double Rectangle::aire(){
 };
 
 void Rectangle::afficher(ostream &s){
-  s << "Rectangle:(x=" << getAncrageForme().x
-    << ", y="          << getAncrageForme().y
-    << ", l="          << getLargeur()
-    << ", h="          << getHauteur()
-    << ", aire="       << aire()
-    << ")\n";
+  s << "R " << getAncrageForme().x
+    << " "  << getAncrageForme().y
+    << " "  << getLargeur()
+    << " "  << getHauteur();
 };
